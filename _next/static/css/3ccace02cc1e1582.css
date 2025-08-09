@@ -1,0 +1,140 @@
+.team {
+    padding-bottom: 70px
+}
+
+.team .section-title {
+    text-align: left;
+    margin-bottom: 50px
+}
+
+.team__item {
+    height: 480px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-position: 50%;
+    background-size: cover
+}
+
+.team__item:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(34,48,96,.8);
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    transition: all,.5s,ease-out,.5s
+}
+
+.team__item:hover:after {
+    opacity: 1
+}
+
+.team__item:hover .team__text {
+    top: 0;
+    padding: 6px
+}
+
+.team__item:hover .team__text .team__title {
+    border-bottom: 1px solid hsla(0,0%,72%,.2);
+    padding: 26px 12px;
+    margin-bottom: 26px;
+    visibility: hidden;
+    position: relative;
+    bottom: auto;
+    opacity: 1;
+    visibility: visible
+}
+
+.team__item:hover .team__text p {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease .3s
+}
+
+.team__item:hover .team__text .team__social {
+    opacity: 1;
+    visibility: visible;
+    bottom: 34px;
+    transition: all .5s ease .5s
+}
+
+.team__text {
+    height: 100%;
+    top: 361px;
+    position: relative;
+    transition: .5s
+}
+
+.team__text .team__title {
+    padding: 26px 12px;
+    position: relative
+}
+
+.team__text:hover .team__title {
+    padding: 26px 12px
+}
+
+.team__text .team__title h4 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 2rem
+}
+
+.team__text .team__title span {
+    font-size: .8rem;
+    color: #ddd;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 4px;
+    text-transform: uppercase
+}
+
+.team__text p {
+    color: #e4e4e4;
+    line-height: 26px;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    top: 50px;
+    transition: all .3s
+}
+
+.team__text .team__social {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden
+}
+
+.team__text .team__social a {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 34px;
+    transition: all,.3s
+}
+
+.team__text .team__social a:last-child {
+    margin-right: 0
+}
+
+.team__text .team__social a:hover {
+    color: #000
+}
+
+@media (max-width: 768px) {
+    .team__text p {
+        font-size:12px
+    }
+}
